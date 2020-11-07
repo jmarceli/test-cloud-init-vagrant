@@ -1,0 +1,12 @@
+# see https://cloudinit.readthedocs.io/en/latest/topics/examples.html
+packages:
+  - acl
+  - python-is-python3
+users:
+  - name: test_user_unique_name
+    groups: sudo
+    homedir: /custom/home/dir
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    # ssh-authorized-keys:
+    #   - ssh-rsa USE_YOUR_RSA_KEY_HERE_IF_NEEDED
