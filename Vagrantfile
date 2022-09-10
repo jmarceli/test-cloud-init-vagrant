@@ -1,4 +1,5 @@
 Vagrant.configure("2") do |config|
+  config.vagrant.plugins = "vagrant-env" # Install plugin to support .env files
   config.env.enable # enable .env support plugin (it will let us easily enable cloud_init support)
 
   # Give a custom name for a VM created by this script for a Vagrant CLI
